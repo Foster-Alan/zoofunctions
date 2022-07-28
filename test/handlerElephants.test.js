@@ -27,6 +27,6 @@ describe('Testes da função HandlerElephants', () => {
   });
 
   it('caso receba uma string que não ctem função deve retornar null', () => {
-    expect(handlerElephants('lastName')).toBe(null);
+    expect(handlerElephants('seiLa')).toBe(null);
   });
 });
