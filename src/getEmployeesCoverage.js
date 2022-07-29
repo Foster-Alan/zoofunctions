@@ -13,14 +13,14 @@ const result = data.employees.map((elementSpecie) => (
   }
 ));
 
-function getEmployeesCoverage(nameOrId) {
-  const condit = nameOrId && result.find((element) => element.id === nameOrId.id
-  || element.fullName.split(' ')[0] === nameOrId.name
-  || element.fullName.split(' ')[1] === nameOrId.name);
+function getEmployeesCoverage(param) {
+  const condit = param && result.find((element) => element.id === param.id
+  || element.fullName.split(' ')[0] === param.name
+  || element.fullName.split(' ')[1] === param.name);
   if (condit) {
     return condit;
   }
-  if (nameOrId) {
+  if (param) {
     throw new Error('Informações inválidas');
   }
   return result;
