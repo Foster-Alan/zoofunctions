@@ -1,5 +1,7 @@
 const handlerElephants = require('../src/handlerElephants');
 
+// NOTA: Tests muito genericos, talvez procurar formas mais complexas?
+
 describe('Testes da função HandlerElephants', () => {
   it('caso receba o parametro count deve retornar o número 4', () => {
     expect(handlerElephants('count')).toBe(4);

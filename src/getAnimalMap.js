@@ -1,5 +1,6 @@
 const data = require('../data/zoo_data');
 
+// Desconstruir para usar abaixo:
 const { species } = data;
 
 const creatAMap = () => species.reduce((acc, element) => {
@@ -20,7 +21,7 @@ const nomeMap = () => species.reduce((acc, element) => {
   });
   return acc;
 }, {});
-
+// Ordenar:
 const nameSort = () => species.reduce((acc, element) => {
   acc[element.location] = [];
   species.forEach((animal) => {
@@ -45,7 +46,7 @@ const nameSex = (param1) => species.reduce((acc, element) => {
   });
   return acc;
 }, {});
-
+// Ordenar Novamente:
 const sortNameSex = (param1) => species.reduce((acc, element) => {
   acc[element.location] = [];
   species.forEach((animal) => {
@@ -58,7 +59,7 @@ const sortNameSex = (param1) => species.reduce((acc, element) => {
   });
   return acc;
 }, {});
-
+// Verificar chave do objeto passado:
 const verifi = (param1) => {
   if (Object.keys(param1).includes('sex') && Object.keys(param1).includes('sorted')) {
     return sortNameSex(param1);

@@ -1,7 +1,9 @@
 const data = require('../data/zoo_data');
 
+// Armazenas informaçoes para uso refatoradas:
 const nameAnimals = data.species.map((element) => element.name);
 const daysWeek = Object.keys(data.hours);
+// Criar retorno de objeto pedido de acordo com horario:
 const schedule = Object.fromEntries(
   daysWeek.map((element) => [
     element,

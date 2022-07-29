@@ -1,5 +1,6 @@
 const data = require('../data/zoo_data');
 
+// Retorno final refatorado:
 const result = data.employees.map((elementSpecie) => (
   {
     id: elementSpecie.id,
@@ -12,8 +13,8 @@ const result = data.employees.map((elementSpecie) => (
     )),
   }
 ));
-
 function getEmployeesCoverage(param) {
+  // Construindo a condição:
   const condit = param && result.find((element) => element.id === param.id
   || element.fullName.split(' ')[0] === param.name
   || element.fullName.split(' ')[1] === param.name);

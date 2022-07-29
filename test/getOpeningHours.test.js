@@ -1,5 +1,7 @@
 const getOpeningHours = require('../src/getOpeningHours');
 
+// NOTA: toThrowError new Error direto no it é estramamente util mas talvez não seja a resolução mas clara, rever outras formas mais tarde.
+
 describe('Testes da função getOpeningHours', () => {
   const hours = {
     Tuesday: { open: 8, close: 6 },
